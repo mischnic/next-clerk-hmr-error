@@ -24,7 +24,8 @@
     "postinstall": "husky",
     "check-format": "yarn run prettier --cache --list-different",
     "check-types": "tsc --noEmit -p tsconfig.json",
-    "validate": "yarn npm-run-all --parallel check-types check-format lint"
+    "validate": "yarn npm-run-all --parallel check-types check-format lint",
+    "test:ci": "true"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.6.1",
