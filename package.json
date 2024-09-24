@@ -1,0 +1,61 @@
+{
+  "name": "next-clerk-hmr-error",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "yarn@4.5.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20.x",
+    "yarn": ">=4.5.0",
+    "npm": ">=7"
+  },
+  "browserslist": [
+    "last 2 node major versions"
+  ],
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint  --ignore-path .gitignore .",
+    "prettier": "prettier --config .prettierrc --ignore-path .gitignore \"**/*.+(js|jsx|json|yml|ts|tsx|css|md|yaml)\"",
+    "format": " yarn run lint --fix . && yarn run prettier --cache --write",
+    "format:force": " yarn run lint --fix . && yarn run prettier --write",
+    "prepare": "husky",
+    "postinstall": "husky",
+    "check-format": "yarn run prettier --cache --list-different",
+    "check-types": "tsc --noEmit -p tsconfig.json",
+    "validate": "yarn npm-run-all --parallel check-types check-format lint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^5.6.1",
+    "@sentry/nextjs": "^8",
+    "browserslist": "^4.23.3",
+    "next": "14.2.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^14.2.13",
+    "@types/node": "^20.16.6",
+    "@types/react": "^18.3.9",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.2.13",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.47",
+    "postcss-import": "^16.1.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwind-css": "^1.5.0",
+    "tailwindcss": "^3.4.13",
+    "typescript": "~5.5.4",
+    "typescript-eslint": "^8.7.0"
+  },
+  "resolutions": {
+    "@typescript-eslint/parser": ">=8.6.0"
+  }
+}

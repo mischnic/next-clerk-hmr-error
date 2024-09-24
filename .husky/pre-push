@@ -1,0 +1,4 @@
+. .husky/common.sh
+
+yarn run validate
+yarn run test:ci
