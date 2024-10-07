@@ -7,9 +7,6 @@
     "node": ">=20.x",
     "npm": ">=7"
   },
-  "browserslist": [
-    "last 2 node major versions"
-  ],
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
