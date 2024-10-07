@@ -8,8 +8,6 @@ import * as Sentry from "@sentry/nextjs";
 //   InstrumentationBase,
 // } = require("./node_modules/.pnpm/@opentelemetry+instrumentation@0.53.0_@opentelemetry+api@1.9.0/node_modules/@opentelemetry/instrumentation/build/src/platform/node/instrumentation.js");
 
-const { Hook } = require("require-in-the-middle");
-
 // class X extends InstrumentationBase {
 //   constructor() {
 //     super("test", "1.0.0", {});
@@ -32,6 +30,7 @@ export async function register() {
   // });
   // try {
   // new X();
+  const { Hook } = require("require-in-the-middle");
   new Hook(
     // Intercept all `require` calls; we will filter the matching ones below
     null,
