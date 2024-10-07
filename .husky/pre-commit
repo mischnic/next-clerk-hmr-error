@@ -1,5 +1,0 @@
-. .husky/common.sh
-
-# lint-staged will run eslint, prettier, and ts-check
-# with --fix on all files, then commit the changes
-yarn run lint-staged

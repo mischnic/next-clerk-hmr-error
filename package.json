@@ -2,11 +2,9 @@
   "name": "next-clerk-hmr-error",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "yarn@4.5.0",
   "type": "module",
   "engines": {
     "node": ">=20.x",
-    "yarn": ">=4.5.0",
     "npm": ">=7"
   },
   "browserslist": [
@@ -18,21 +16,21 @@
     "start": "next start",
     "lint": "next lint  --ignore-path .gitignore .",
     "prettier": "prettier --config .prettierrc --ignore-path .gitignore \"**/*.+(js|jsx|json|yml|ts|tsx|css|md|yaml)\"",
-    "format": " yarn run lint --fix . && yarn run prettier --cache --write",
-    "format:force": " yarn run lint --fix . && yarn run prettier --write",
+    "format": " pnpm run lint --fix . && pnpm run prettier --cache --write",
+    "format:force": " pnpm run lint --fix . && pnpm run prettier --write",
     "prepare": "husky",
     "postinstall": "husky",
-    "check-format": "yarn run prettier --cache --list-different",
+    "check-format": "pnpm run prettier --cache --list-different",
     "check-types": "tsc --noEmit -p tsconfig.json",
-    "validate": "yarn npm-run-all --parallel check-types check-format lint",
+    "validate": "pnpm npm-run-all --parallel check-types check-format lint",
     "test:ci": "true"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.6.1",
-    "@sentry/nextjs": "^8",
+    "@sentry/nextjs": "^8.33.1",
     "browserslist": "^4.23.3",
     "import-in-the-middle": "^1.11.0",
-    "next": "15.0.0-canary.177",
+    "next": "15.0.0-canary.179",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
