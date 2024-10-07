@@ -1,4 +1,8 @@
-import { ClerkProvider /* SignedIn, SignedOut, SignInButton, UserButton */ } from "@clerk/nextjs";
+import {
+  ClerkProvider /* SignedIn, SignedOut, SignInButton, UserButton */,
+} from "@clerk/nextjs";
+
+// console.log( process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY );
 
 export default function RootLayout({
   children,
